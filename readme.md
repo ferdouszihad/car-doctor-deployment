@@ -51,11 +51,10 @@ app.use(
 const cookieOptions = {
   httpOnly: true,
   secure: process.env.NODE_ENV === "production",
-  sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",/
+  sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
 };
 //localhost:5000 and localhost:5173 are treated as same site.  so sameSite value must be strict in development server.  in production sameSite will be none
 // in development server secure will false .  in production secure will be true
-
 ```
 
 ## now we can use this object for cookie option to modify cookies
@@ -86,10 +85,12 @@ app.post("/logout", async (req, res) => {
 
 vercel
 vercel --prod
+
+```
+
 - After completed the deployment . click on inspect button and copy the production domain
 - setup your environment variables in vercel
 - check your public API
-```
 
 <img src="code.jpg"/>
 
