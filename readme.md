@@ -1,6 +1,6 @@
-## Server Deploy
+## Server Deployment steps
 
-1. comment asynchronus commands outside api methods for solving gateway timeout error
+1. comment await commands outside api methods for solving gateway timeout error
 
 ```js
 //comment following commands
@@ -85,12 +85,10 @@ app.post("/logout", async (req, res) => {
 
 vercel
 vercel --prod
-
-```
-
-- After completed the deployment . click on inspect button and copy the production domain
+- After completed the deployment . click on inspect link and copy the production domain
 - setup your environment variables in vercel
 - check your public API
+```
 
 <img src="code.jpg"/>
 
